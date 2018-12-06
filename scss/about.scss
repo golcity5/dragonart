@@ -79,7 +79,7 @@
     // height: calc(250px * 1.84);
     height: 40vh;
     @include flex(flex-start);
-    background-image: url('../../assets/about/channel/film.svg');
+    background-image: url('../../../assets/about/channel/film.svg');
   }
   .channel_bottom {
     // height: calc(320px * 1.84);
@@ -136,16 +136,16 @@
     background-size: contain;
     margin: 5rem 0.5rem;
     &:nth-child(1) {
-      background-image: url('../assets/about/tv/mbc.svg');
+      background-image: url('../../assets/about/tv/mbc.svg');
     }
     &:nth-child(2) {
-      background-image: url('../assets/about/tv/mod.svg');
+      background-image: url('../../assets/about/tv/mod.svg');
     }
     &:nth-child(3) {
-      background-image: url('../assets/about/tv/hami.svg');
+      background-image: url('../../assets/about/tv/hami.svg');
     }
     &:nth-child(4) {
-      background-image: url('../assets/about/tv/ctv.svg');
+      background-image: url('../../assets/about/tv/ctv.svg');
     }
   }
 }

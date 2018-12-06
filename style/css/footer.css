@@ -129,20 +129,20 @@ footer .contact .contact_data .icons {
           align-items: center;
 }
 
-footer .contact .contact_data .icons > .icon {
+footer .contact .contact_data .icons .icon {
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-footer .contact .contact_data .icons > .icon:nth-child(1) {
+footer .contact .contact_data .icons .icon.icon-youtube {
   width: 60px;
   height: 40px;
   background-image: url("../../assets/footer/youtube.svg");
   margin-right: 2rem;
 }
 
-footer .contact .contact_data .icons > .icon:nth-child(2) {
+footer .contact .contact_data .icons .icon.icon-facebook {
   width: 45px;
   height: 45px;
   background-image: url("../../assets/footer/facebook.svg");

@@ -1,7 +1,33 @@
 @import './_mixins.scss';
 
+main {
+  position: relative;
+  .shareTo {
+    @include flex(flex-start, center);
+    flex-direction: column;
+    position: absolute;
+    right: 4vw;
+    top: 0;
+    .icon {
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 2rem;
+      &.icon-youtube {
+        @include size(54px, 36px);
+        background-image: url('../../assets/footer/youtube.svg');
+      }
+      &.icon-facebook {
+        @include size(42px);
+        background-image: url('../../assets/footer/facebook.svg');
+      }
+    }
+  }
+}
 .program-swiper {
-  @include size(80vw, 100%);
+  @include size(88vw, 100%);
+  margin: unset;
+  margin-left: 3vw;
   .swiper-wrapper {
     @include size(100%);
   }

@@ -1,0 +1,70 @@
+@import './_mixins.scss';
+
+.programList {
+  .tvshow {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 10%;
+    background-color: #FFF;
+  }
+  //---------------------------------------------
+  .switch {
+    li {
+      a {
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        &.active, &:hover {
+          background-color: $primary !important;
+          color: #FFF;
+          border-radius: 15px;
+          &::after {
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
+  }
+  //---------------------------------------------
+  .switch_day {
+    @include flex(center);
+    margin: 2rem 0;
+    .swiper-container {
+      flex: auto;
+      .swiper-button-prev, .swiper-button-next {
+        background-image: none;
+        background-image: url('../../assets/angle.svg');
+      }
+      .swiper-button-prev {
+        left: 0;
+      }
+      .swiper-button-next {
+        right: 0;
+        transform: rotate(180deg)
+      }
+      .swiper-slide {
+        @include flex(center);
+        // padding: 0 5rem;
+        .day {
+          flex: 1;
+          padding: 0.5rem 0;
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: bold;
+          border-right: 2px solid #000;
+          &:nth-child(7n) {
+            border-right: none;
+          }
+        }
+      }
+    }
+    .icon-calendar {
+      flex: none;
+      @include size(75px);
+      margin-left: 2rem;
+      background-image: url('../../assets/calendar.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}

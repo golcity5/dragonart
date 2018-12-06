@@ -149,7 +149,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-image: url("../../assets/about/channel/film.svg");
+  background-image: url("../../../assets/about/channel/film.svg");
 }
 
 .channel_left .channel_bottom {
@@ -235,17 +235,17 @@
 }
 
 .about_tv .icon:nth-child(1) {
-  background-image: url("../assets/about/tv/mbc.svg");
+  background-image: url("../../assets/about/tv/mbc.svg");
 }
 
 .about_tv .icon:nth-child(2) {
-  background-image: url("../assets/about/tv/mod.svg");
+  background-image: url("../../assets/about/tv/mod.svg");
 }
 
 .about_tv .icon:nth-child(3) {
-  background-image: url("../assets/about/tv/hami.svg");
+  background-image: url("../../assets/about/tv/hami.svg");
 }
 
 .about_tv .icon:nth-child(4) {
-  background-image: url("../assets/about/tv/ctv.svg");
+  background-image: url("../../assets/about/tv/ctv.svg");
 }

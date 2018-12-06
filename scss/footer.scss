@@ -84,19 +84,19 @@ footer {
       .icons {
         @include size(100%, 30px);
         @include flex(flex-start, center);
-      }
-      .icons > .icon {
-        background-position: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        &:nth-child(1) {
-          @include size(60px, 40px);
-          background-image: url('../../assets/footer/youtube.svg');
-          margin-right: 2rem;
-        }
-        &:nth-child(2) {
-          @include size(45px);
-          background-image: url('../../assets/footer/facebook.svg');
+        .icon {
+          background-position: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          &.icon-youtube {
+            @include size(60px, 40px);
+            background-image: url('../../assets/footer/youtube.svg');
+            margin-right: 2rem;
+          }
+          &.icon-facebook {
+            @include size(45px);
+            background-image: url('../../assets/footer/facebook.svg');
+          }
         }
       }
     }

@@ -25,6 +25,67 @@ main {
       }
     }
   }
+  //---------------------------------------------
+  .tvshow {
+    .switch {
+      border-bottom: none;
+      li {
+        &:first-child {
+          margin-left: 0;
+        }
+        a {
+          text-decoration: none;
+          color: $primary;
+          font-weight: bold;
+          letter-spacing: 1px;
+          &.active {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+.home {
+  .tvshow {
+    width: 100%;
+    margin-top: 5rem;
+    padding: 2rem 5rem;
+    background-color: #EEE;
+    box-shadow: 0px 0px 5px 1px #888888;
+    // 切換台
+    .switch {
+      @include flex(flex-start, center);
+      li {
+        margin: 0 1rem;
+        a.active {
+          background-color: transparent;
+          position: relative;
+          &::after {
+            content: '';
+            @include size(100%, 3px);
+            background-color: $primary;
+            border-radius: 10px;
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  //---------------------------------------------
+  .tv-list {
+    display: none;
+    &.show {
+      display: flex;
+    }
+    .tv_card {
+      padding: 0;
+      padding-right: 30px;
+    }
+  }
+  //---------------------------------------------
   .banner-swiper {
     @include size(100%);
     .swiper-wrapper {
@@ -36,48 +97,6 @@ main {
         display: block;
         max-width: 100%;
       }
-    }
-  }
-  //---------------------------------------------
-  .tvshow {
-    width: 100%;
-    margin-top: 5rem;
-    padding: 2rem 5rem;
-    background-color: #EEE;
-    box-shadow: 0px 0px 5px 1px #888888;
-    // 切換台
-    .switch {
-      @include flex(flex-start, center);
-      border-bottom: none;
-      li {
-        margin: 0 1rem;
-        // padding-bottom: 1rem;
-        a {
-          text-decoration: none;
-          color: $primary;
-          font-weight: bold;
-          &.active {
-            border: none;
-            background-color: transparent;
-            position: relative;
-            &::after {
-              content: '';
-              @include size(100%, 3px);
-              background-color: $primary;
-              border-radius: 10px;
-              position: absolute;
-              bottom: -0.5rem;
-              left: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-  .tv-list {
-    display: none;
-    &.show {
-      display: flex;
     }
   }
 }
