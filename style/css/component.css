@@ -76,10 +76,6 @@
   color: #000;
 }
 
-.tv-list .card:first-child {
-  margin-left: 0;
-}
-
 .tv-list .card .card_header, .tv-list .card .card_body, .tv-list .card .card_footer {
   width: 100%;
 }
