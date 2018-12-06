@@ -1,0 +1,68 @@
+@import './_mixins.scss';
+
+.program-swiper {
+  @include size(80vw, 100%);
+  .swiper-wrapper {
+    @include size(100%);
+  }
+  .swiper-pagination {
+    bottom: 100px;
+  }
+  .swiper-pagination-bullet {
+    background-color: #FFF !important;
+    &.swiper-pagination-bullet-active {
+      &::before {
+        background-color: $primary;
+      }
+    }
+  }
+  .swiper-slide {
+    height: auto;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    .title {
+      color: #FFF;
+      background-color: $primary;
+      margin-bottom: 0;
+      padding: 0.5rem 3rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+.program_detail {
+  width: 80vw;
+  margin: 0 auto;
+  .broadcast_time {
+    color: #2572BF;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    position: relative;
+    &::after {
+      content: '';
+      @include size(100%, 2px);
+      background-color: #2572BF;
+      position: absolute;
+      bottom: -1rem;
+      left: 0
+    }
+  }
+  .detail {
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-align: justify;
+    // text-justify: inter-word;
+    word-wrap: break-word;
+  }
+}

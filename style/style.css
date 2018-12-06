@@ -1,0 +1,11 @@
+/* clear style */
+@import './_reset.css';
+/* 共同元件樣式 */
+@import './css/header.css';
+@import './css/footer.css';
+@import './css/component.css';
+/* 頁面main樣式 */
+@import './css/home.css';
+@import './css/about.css';
+@import './css/channel.css';
+@import './css/program.css';

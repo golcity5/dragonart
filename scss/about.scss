@@ -1,0 +1,151 @@
+@import './_mixins.scss';
+@import './_extends.scss';
+
+.about_intro {
+  padding: 0 10%;
+  .title {
+    @extend %title;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  //-----------------------------------
+  .content {
+    margin: 5rem 0;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.2;
+    p {
+      @include flex(flex-start);
+      margin-bottom: 0;
+    }
+  }
+}
+//------------------------------------------------------------------------
+.about_channel {
+  @include flex(center, flex-start);
+  flex-wrap: wrap;
+  padding: 0 8%;
+  .channel {
+    overflow: hidden;
+    // height: 1122px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .title {
+      @include flex(center);
+      font-size: 1.2rem;
+      letter-spacing: 5px;
+      color: #FFF;
+      background-color: $primary;
+      margin-bottom: 0;
+      position: relative;
+      &::after {
+        content: '';
+        background-color: #FFF;
+        position: absolute;
+      }
+    }
+    .img {
+      @include size(100%);
+    }
+    // 左右區塊內上下皆共用的樣式
+    .channel_top, .channel_bottom {
+      overflow: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    // 調整間距
+    .channel_top {
+      margin-bottom: 1rem;
+    }
+    // 左下、右上標題的透明度調整
+    &.channel_left > .channel_bottom, &.channel_right > .channel_top {
+      .title {
+        background-color: rgba(119, 54, 91, 0.7);
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------
+.channel_left {
+  flex: 1.64;
+  margin-right: 1rem;
+  border-radius: 50px 0 0 50px;
+  .channel_top {
+    // height: calc(250px * 1.84);
+    height: 40vh;
+    @include flex(flex-start);
+    background-image: url('../../assets/about/channel/film.svg');
+  }
+  .channel_bottom {
+    // height: calc(320px * 1.84);
+    height: 60vh;
+    @include flex(flex-end);
+    background-image: url('../../assets/about/channel/taiwan.svg');
+  }
+  // 調整標題的樣式及底線
+  .channel_top, .channel_bottom {
+    .title {
+      flex: none;
+      @include size(80px, 100%);
+      writing-mode: vertical-lr;
+      &::after {
+        @include size(1px, 80%);
+        top: 10%;
+        right: 15px;
+      }
+    }
+  }
+}
+.channel_right {
+  flex: 1;
+  border-radius: 0 50px 50px 0;
+  .channel_top {
+    // height: calc(417px * 1.84);
+    height: 60vh;
+    background-image: url('../../assets/about/channel/hg.svg');
+  }
+  .channel_bottom {
+    // height: calc(155px * 1.84 + 60px);
+    height: 40vh;
+    background-image: url('../../assets/about/channel/consert.svg');
+  }
+  // 調整標題的樣式及底線
+  .channel_top, .channel_bottom {
+    .title {
+      @include size(100%, 80px);
+      &::after {
+        @include size(80%, 1px);
+        bottom: 15px;
+        left: 10%;
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------
+.about_tv {
+  @include flex(center);
+  .icon {
+    @include size(150px, 100px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 5rem 0.5rem;
+    &:nth-child(1) {
+      background-image: url('../assets/about/tv/mbc.svg');
+    }
+    &:nth-child(2) {
+      background-image: url('../assets/about/tv/mod.svg');
+    }
+    &:nth-child(3) {
+      background-image: url('../assets/about/tv/hami.svg');
+    }
+    &:nth-child(4) {
+      background-image: url('../assets/about/tv/ctv.svg');
+    }
+  }
+}

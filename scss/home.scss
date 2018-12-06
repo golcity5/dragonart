@@ -1,0 +1,83 @@
+@import './_mixins.scss';
+
+main {
+  width: 100%;
+  .back {
+    width: 100%;
+    @include flex(center);
+    margin: 3rem 0;
+    button {
+      // @include size(120px, 70px);
+      @include flex(center);
+      flex-direction: column;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      .icon {
+        @include size(70px, 40px);
+        background-image: url('../../assets/back_to_top.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .banner-swiper {
+    @include size(100%);
+    .swiper-wrapper {
+      @include size(100%);
+    }
+    .swiper-slide {
+      @include size(100%);
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+  //---------------------------------------------
+  .tvshow {
+    width: 100%;
+    margin-top: 5rem;
+    padding: 2rem 5rem;
+    background-color: #EEE;
+    box-shadow: 0px 0px 5px 1px #888888;
+    // 切換台
+    .switch {
+      @include flex(flex-start, center);
+      border-bottom: none;
+      li {
+        margin: 0 1rem;
+        // padding-bottom: 1rem;
+        a {
+          text-decoration: none;
+          color: $primary;
+          font-weight: bold;
+          &.active {
+            border: none;
+            background-color: transparent;
+            position: relative;
+            &::after {
+              content: '';
+              @include size(100%, 3px);
+              background-color: $primary;
+              border-radius: 10px;
+              position: absolute;
+              bottom: -0.5rem;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tv-list {
+    display: none;
+    &.show {
+      display: flex;
+    }
+  }
+}

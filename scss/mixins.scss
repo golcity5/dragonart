@@ -1,0 +1,12 @@
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex($horizontal, $vertical: $horizontal) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+$primary: #6D1B46;

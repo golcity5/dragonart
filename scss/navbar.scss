@@ -1,0 +1,117 @@
+@import './mixins.scss';
+
+.mynavbar {
+  @include size(100%, 80px);
+  @include flex(center);
+  background-color: #FFF;
+  padding: 0 2rem;
+  border-bottom: 1px solid #000;
+  .logo, .menu {
+    height: 100%;
+    @include flex(flex-start, center);
+    &, * {
+      margin: 0;
+    }
+  }
+  .logo {
+    flex: none;
+    width: 20%;
+    color: #000;
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+    > .icon {
+      @include size(50px);
+      background-image: url('../assets/logo.svg');
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 1rem;
+    }
+    > .title {
+      .lang_tw, .lang_en {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .lang_tw {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+      .lang_en {
+        font-size: 1rem;
+      }
+    }
+  }
+  .menu {
+    flex: auto;
+    @include flex(flex-start, center);
+    &.ul_right {
+      @include flex(flex-end, center);
+    }
+    > .nav_link {
+      flex: none;
+      width: 7rem;
+      text-align: center;
+      margin-left: 1rem;
+      padding: 0.5rem 0;
+      border-radius: 20px;
+      > a {
+        color: $primary;
+        font-weight: bold;
+      }
+      &.active, &:hover {
+        background-color: $primary;
+        > a {
+          color: #FFF;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.searchbar {
+  @include size(100%, 56px);
+  @include flex(center);
+  background-color: $primary;
+  padding: 0.5rem 2rem;
+  color: #FFF;
+  > p {
+    margin: 0;
+  }
+  .news, .search {
+    height: 100%;
+    @include flex(flex-start, center);
+  }
+  .news {
+    flex: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-right: 1rem;
+    border-right: 1px solid #FFF;
+  }
+  .search {
+    flex: none;
+    width: auto;
+    @include flex(center);
+    background-color: #fff;
+    border-radius: 30px;
+    padding-left: 1rem;
+    input {
+      width: 20vw;
+      background-color: transparent;
+      font-size: 1rem;
+    }
+    .search_btn {
+      @include size(40px, 30px);
+      @include flex(center);
+      margin: 5px;
+      background-color: $primary;
+      color: #FFF;
+      border-radius: 30px;
+    }
+  }
+}

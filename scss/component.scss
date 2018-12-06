@@ -1,0 +1,97 @@
+@import './_mixins.scss';
+
+// 各頁的banner圖片
+.banner {
+  margin-bottom: 5rem;
+  position: relative;
+  img {
+    width: 100vw;
+  }
+  .channel {
+    font-size: 2.5rem;
+    color: #FFF;
+    position: absolute;
+    bottom: 2rem;
+    right: 5rem;
+  }
+}
+
+// banner swiper pagination
+.swiper-pagination {
+  @include size(100%, 30px);
+  @include flex(center);
+  .swiper-pagination-bullet {
+    @include size(1rem);
+    text-align: center;
+    opacity: 1;
+    background-color: $primary;
+    margin: 0 0.5rem;
+  }
+  .swiper-pagination-bullet-active {
+    position: relative;
+    &::before {
+      content: '';
+      @include size(0.5rem);
+      @include flex(center);
+      background-color: #FFF;
+      border-radius: 50%;
+      position: absolute;
+      top: calc((100% - 0.5rem) / 2);
+      left: calc((100% - 0.5rem) / 2);
+    }
+  }
+}
+
+//----------------------------------------------------------
+// 節目列表卡片
+.tv-list {
+  width: 100%;
+  margin: 0;
+  .card {
+    // border: none;
+    width: 100%;
+    border-radius: 20px;
+    margin: 1rem 0;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000;
+    .card_header, .card_body, .card_footer {
+      width: 100%;
+    }
+    .card_header {
+      @include flex(center);
+      background-color: $primary;
+      color: #FFF;
+      padding: 0.5rem 0;
+    }
+    .card_body {
+      @include size(100%, calc((100vw - 20rem - 90px) / 3));
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .card_footer {
+      background-color: #FFF;
+      padding: 0 1rem 1rem 1rem;
+      .play_date, .play_intro {
+        margin: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      .hr {
+        @include size(70%, 2px);
+        display: block;
+        background-color: $primary;
+      }
+      .play_date {
+        font-weight: bold;
+      }
+      .play_intro {
+        .readmore {
+          color: #808080;
+        }
+      }
+    }
+  }
+}
+//----------------------------------------------------------

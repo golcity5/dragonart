@@ -1,0 +1,22 @@
+* {
+  border: none;
+  outline: none;
+  appearance: none;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+input, textarea {
+  user-select: text !important;
+  -webkit-touch-callout: none !important;
+}
+
+button:focus {
+  outline: none;
+}

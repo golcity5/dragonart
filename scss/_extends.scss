@@ -1,0 +1,23 @@
+%title {
+  color: $primary;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  display: inline;
+  position: relative;
+  &::before, &::after {
+    content: '';
+    background-color: $primary;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  &::before {
+    @include size(120%, 1px);
+    bottom: -10px;
+  }
+  &::after {
+    @include size(60%, 5px);
+    bottom: -20px;
+  }
+}
